@@ -26,13 +26,13 @@ const index = () => {
             </div>
             {/* End hero title */}
 
-            <div
+            {/* <div
               className="tabs -underline mt-60 js-tabs"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <MainFilterSearchBox />
-            </div>
+            </div> */}
             {/* End tab-filter */}
           </div>
         </div>

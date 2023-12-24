@@ -34,7 +34,7 @@ const Home_4 = () => {
 
       <Hero4 />
       {/* End Hero 4 */}
-
+{/* 
       <section className="layout-pt-lg layout-pb-md">
         <div className="container">
           <div className="row y-gap-20 justify-center text-center">
@@ -48,15 +48,15 @@ const Home_4 = () => {
                 </p>
               </div>
             </div>
-            {/* End .col */}
+       
           </div>
-          {/* End .row */}
+   
 
           <div className="relative pt-40 ">
             <Travellers />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End Travellers Section */}
 
       <section className="layout-pt-md layout-pb-lg">
@@ -64,10 +64,10 @@ const Home_4 = () => {
           <div className="row justify-center text-center">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Hotels</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
+                <h2 className="sectionTitle__title">Upcoming Events</h2>
+                {/* <p className=" sectionTitle__text mt-5 sm:mt-0">
                   Interdum et malesuada fames ac ante ipsum
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

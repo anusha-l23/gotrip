@@ -31,7 +31,7 @@ const Home_1 = () => {
       <Hero1 />
       {/* End Hero 1 */}
 
-      <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
+      {/* <section className="layout-pt-lg layout-pb-md" data-aos="fade-up">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
@@ -42,7 +42,7 @@ const Home_1 = () => {
                 </p>
               </div>
             </div>
-            {/* End col-auto */}
+        
 
             <div className="col-auto md:d-none">
               <a
@@ -53,42 +53,40 @@ const Home_1 = () => {
                 <div className="icon-arrow-top-right ml-15" />
               </a>
             </div>
-            {/* End col-auto */}
+        
           </div>
-          {/* End .row */}
+    
 
           <div className="relative pt-40 sm:pt-20">
             <PopularDestinations />
           </div>
         </div>
-        {/* End .container */}
-      </section>
-      {/* End Popular Destinations */}
+      
+      </section> */}
+    
 
-      <section className="layout-pt-md layout-pb-md">
+      {/* <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-20">
             <AddBanner />
           </div>
         </div>
-        {/* End .container */}
-      </section>
-      {/* End AddBanner */}
+       
+      </section> */}
+  
 
       <section className="layout-pt-md layout-pb-md">
         <div className="container">
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Recommended</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
+                <h2 className="sectionTitle__title">Upcoming Events</h2>
+               
               </div>
             </div>
-            <div className="col-sm-auto">
+            {/* <div className="col-sm-auto">
               <SelectFilter />
-            </div>
+            </div> */}
           </div>
           {/* End .row */}
 
@@ -100,13 +98,13 @@ const Home_1 = () => {
       </section>
       {/* Recommended Properties */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20 justify-between">
             <BlockGuide />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Block Guide Section */}
 
       <section className="layout-pt-lg layout-pb-lg bg-blue-2">
@@ -115,7 +113,7 @@ const Home_1 = () => {
             <div className="col-xl-5 col-lg-6" data-aos="fade-up">
               <TestimonialLeftCol />
             </div>
-            {/* End col */}
+          
 
             <div className="col-lg-6">
               <div
@@ -127,13 +125,13 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
+    
         </div>
-        {/* End container */}
+    
       </section>
       {/* End testimonial Section */}
 
-      <section className="layout-pt-lg layout-pb-md">
+      {/* <section className="layout-pt-lg layout-pb-md">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -147,17 +145,17 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row  */}
+     
           <div className="row y-gap-30 pt-40">
             <Blog />
           </div>
-          {/* End .row */}
+       
         </div>
-        {/* End .container */}
-      </section>
+    
+      </section> */}
       {/* End blog Section */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row">
             <div className="col-auto">
@@ -169,17 +167,17 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
+
 
           <div className="tabs -pills pt-40 js-tabs">
             <Destinations />
           </div>
-          {/* End tabs */}
+     
         </div>
-      </section>
+      </section> */}
       {/* End Destination we love Section */}
 
-      <CallToActions />
+      {/* <CallToActions /> */}
       {/* End Call To Actions Section */}
 
       <DefaultFooter />

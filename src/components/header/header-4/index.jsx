@@ -28,35 +28,42 @@ const Header1 = () => {
       >
         <div className="header__container px-60 xl:px-30 sm:px-20">
           <div className="row justify-between items-center">
-            <div className="col-auto col-auto-menu">
-              <div className="header-menu">
-                <div className="header-menu__content">
-                  <MainMenu style="text-white" />
-                </div>
-              </div>
-              {/* End header-menu */}
-            </div>
-            {/* End col-auto */}
+          <div className="col-auto">
+              <div className="d-flex items-center">
+                <Link to="/" className="header-logo mr-20">
+                  <img src="/img/general/logo-light.svg" alt="logo icon" />
+                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                </Link>
+                {/* End logo */}
 
-            <div className="col-auto">
+                <div className="header-menu">
+                  <div className="header-menu__content">
+                    <MainMenu style="text-white" />
+                  </div>
+                </div>
+                {/* End header-menu */}
+              </div>
+              {/* End d-flex */}
+            </div>
+            {/* <div className="col-auto">
               <Link to="/" className="header-logo">
                 <img src="/img/general/logo-light.svg" alt="logo icon" />
                 <img src="/img/general/logo-dark.svg" alt="logo icon" />
               </Link>
-              {/* End logo */}
+           
             </div>
-            {/* End col-auto */}
+           */}
 
             <div className="col-auto">
               <div className="d-flex items-center">
                 {/* Start btn-group */}
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  <Link
+                  {/* <Link
                     to="/login"
                     className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
                   >
                     Become An Expert
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/signup"
                     className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"

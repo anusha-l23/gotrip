@@ -49,7 +49,7 @@ const index = () => {
                     </div>
                   </div>
                   {/* End text-center */}
-                  <MainFilterSearchBox />
+                  {/* <MainFilterSearchBox /> */}
                   {/* End tab-filter */}
                 </div>
               </div>
