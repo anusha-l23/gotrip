@@ -1,6 +1,25 @@
 import Map from "./Map";
+import {format} from "date-fns";
 
-const SidebarRight2 = () => {
+const SidebarRight2 = ({event}) => {
+
+  const dateString = event?.year || "";
+  let formattedDate = "";
+  if (dateString) {
+  const date = new Date(dateString);
+
+  if (!isNaN(date.getTime())) {
+formattedDate = format(date, "MMMM dd, yyyy - EEEE");
+  console.log(formattedDate,"formatted")
+  }
+  else{
+    console.log("invalid date string")
+  }
+}
+else{
+  console.error('Date string is undefined');
+}
+
   return (
     <div className="px-30 py-30 border-light rounded-4">
       <div className="mb-15">
@@ -11,18 +30,28 @@ const SidebarRight2 = () => {
       <div className="row y-gap-10">
         <div className="col-12">
           <div className="d-flex items-center">
-            <i className="icon-award text-20 text-blue-1" />
+            {/* <i className="icon-award text-20 text-blue-1" /> */}
             <div className="text-14 fw-500 ml-10">
-              Exceptional location - Inside city center
+            <div className="col-auto">
+                      <div className="d-flex items-center text-15 text-light-1">
+                        <i className="icon-location-2 text-16 mr-5" />
+                        {event?.location}
+                      </div>
+                    </div>
+                    <div className="col-auto">
+                      <div className="d-flex items-center text-15 text-light-1">
+                        {formattedDate}
+                      </div>
+                    </div>
             </div>
           </div>
         </div>
-        <div className="col-12">
+        {/* <div className="col-12">
           <div className="d-flex items-center">
             <i className="icon-pedestrian text-20 text-blue-1" />
             <div className="text-14 fw-500 ml-10">Exceptional for walking</div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* End .row */}
 

@@ -15,7 +15,6 @@ import FilterHotels2 from "@/components/hotels/FilterHotels2";
 import { Link } from "react-router-dom";
 import Travellers from "@/components/home/home-4/Travellers";
 import FilterHotels4 from "@/components/hotels/FilterHotels4";
-
 import MetaComponent from "@/components/common/MetaComponent";
 
 const metadata = {
@@ -24,6 +23,8 @@ const metadata = {
 };
 
 const Home_4 = () => {
+
+
   return (
     <>
       <MetaComponent meta={metadata} />

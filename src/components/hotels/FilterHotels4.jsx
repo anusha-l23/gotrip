@@ -13,7 +13,7 @@ export default function FilterHotels4() {
       /> */}
       <div className="tabs__content pt-40">
         <div className="row y-gap-30">
-          <FilterHotels2 filterOption={filterOption} />
+          <FilterHotels2 filterOption={filterOption}/>
         </div>
       </div>
       {/* End .tabs__content */}

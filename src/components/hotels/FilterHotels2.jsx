@@ -3,11 +3,23 @@ import Slider from "react-slick";
 import { hotelsData } from "../../data/hotels";
 import isTextMatched from "../../utils/isTextMatched";
 import { useEffect, useState } from "react";
-
+import axios from "axios";
 const FilterHotels2 = ({ filterOption }) => {
   const [filteredItems, setFilteredItems] = useState([]);
+
+  const [events, setEvents] = useState([])
+  const fetchData = async()=> {
+    const response = await axios.get("http://localhost:3001/santarun/get-results");
+    setEvents(response.data);
+  
+  }
+
+  useEffect(()=>{
+fetchData();
+  },[])
+
   useEffect(() => {
-    setFilteredItems(hotelsData.filter((elm) => elm.city == filterOption));
+    setFilteredItems(events.filter((elm) => elm.location == filterOption));
   }, [filterOption]);
 
   var itemSettings = {
@@ -44,7 +56,7 @@ const FilterHotels2 = ({ filterOption }) => {
 
   return (
     <>
-      {filteredItems.slice(0, 8).map((item) => (
+      {events.slice(0, 8).map((item) => (
         <div
           className="col-xl-3 col-lg-3 col-sm-6"
           key={item?.id}
@@ -63,17 +75,17 @@ const FilterHotels2 = ({ filterOption }) => {
                   nextArrow={<ArrowSlick type="next" />}
                   prevArrow={<ArrowSlick type="prev" />}
                 >
-                  {item?.slideImg?.map((slide, i) => (
-                    <div className="cardImage ratio ratio-1:1" key={i}>
+                 
+                    <div className="cardImage ratio ratio-1:1" key={item.id}>
                       <div className="cardImage__content ">
                         <img
-                          className="rounded-4 col-12 js-lazy"
-                          src={slide}
+                          className=""
+                          src={`http://localhost:3001/${item.eventPicture.replace(/\\/g, '/')}`} width="100%" height="100%"
                           alt="image"
                         />
                       </div>
                     </div>
-                  ))}
+                
                 </Slider>
 
                 <div className="cardImage__wishlist">
@@ -82,7 +94,7 @@ const FilterHotels2 = ({ filterOption }) => {
                   </button>
                 </div>
 
-                <div className="cardImage__leftBadge">
+                {/* <div className="cardImage__leftBadge">
                   <div
                     className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
                       isTextMatched(item?.tag, "breakfast included")
@@ -106,17 +118,17 @@ const FilterHotels2 = ({ filterOption }) => {
                   >
                     {item?.tag}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="hotelsCard__content mt-10">
               <h4 className="hotelsCard__title text-dark-1 text-18 lh-16 fw-500">
-                <span>{item?.title}</span>
+                <span>{item?.eventName}</span>
               </h4>
               <p className="text-light-1 lh-14 text-14 mt-5">
                 {item?.location}
               </p>
-              <div className="d-flex items-center mt-20">
+              {/* <div className="d-flex items-center mt-20">
                 <div className="flex-center bg-blue-1 rounded-4 size-30 text-12 fw-600 text-white">
                   {item?.ratings}
                 </div>
@@ -126,13 +138,13 @@ const FilterHotels2 = ({ filterOption }) => {
                 <div className="text-14 text-light-1 ml-10">
                   {item?.numberOfReviews} reviews
                 </div>
-              </div>
-              <div className="mt-5">
+              </div> */}
+              {/* <div className="mt-5">
                 <div className="fw-500">
                   Starting from{" "}
                   <span className="text-blue-1">US${item?.price}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>

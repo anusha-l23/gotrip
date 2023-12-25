@@ -14,7 +14,7 @@ export const hotelsData = [
   {
     id: 2,
     tag: "",
-    slideImg: ["/img/hotels/2.png", "/img/hotels/1.png", "/img/hotels/3.png"],
+    slideImg: ["/img/hotels/2.png"],
     img: "/img/hotels/2.png",
     title: "Staycity Aparthotels Deptford Bridge Station",
     location: "Ciutat Vella, Barcelona",

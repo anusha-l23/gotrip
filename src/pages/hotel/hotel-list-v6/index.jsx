@@ -84,9 +84,11 @@ const HotelListPage6 = () => {
             <div className="border-top-light mt-30 mb-30"></div>
             {/* End border-top */}
 
-            <div className="row y-gap-30">
-              <HotelProperties />
-            </div>
+            <h1 className="row y-gap-30">
+
+              Latest Results
+              {/* <HotelProperties /> */}
+            </h1>
             {/* End .row */}
             <Pagination />
           </div>

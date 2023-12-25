@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { hotelsData } from "../../../data/hotels";
 import isTextMatched from "../../../utils/isTextMatched";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const HotelProperties = () => {
   var itemSettings = {
@@ -11,6 +13,16 @@ const HotelProperties = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  const [events, setEvents] = useState([])
+  const fetchData = async()=> {
+    const response = await axios.get("http://localhost:3001/santarun/get-results");
+    setEvents(response.data);
+    console.log(response, "response")
+  }
+  useEffect(()=>{
+fetchData();
+  },[])
 
   // custom navigation
   function ArrowSlick(props) {
@@ -38,8 +50,12 @@ const HotelProperties = () => {
 
   return (
     <>
-      {hotelsData.slice(0, 12).map((item) => (
-        <div
+      {events.map((item) => (
+        
+        <Link to={{
+          pathname: "/hotel-single-v2/1",
+          // search: `?event=${encodeURIComponent(item.eventName)}`,
+        }}
           className="col-lg-3 col-sm-6"
           key={item?.id}
           data-aos="fade"
@@ -51,7 +67,7 @@ const HotelProperties = () => {
           >
             <div className="hotelsCard__image">
               <div className="cardImage inside-slider">
-                <Slider
+                {/* <Slider
                   {...itemSettings}
                   arrows={true}
                   nextArrow={<ArrowSlick type="next" />}
@@ -68,8 +84,8 @@ const HotelProperties = () => {
                       </div>
                     </div>
                   ))}
-                </Slider>
-
+                </Slider> */}
+<img src={`http://localhost:3001/${item.eventPicture.replace(/\\/g, '/')}`} width="100%" height="100%" alt="Event" />
                 <div className="cardImage__wishlist">
                   <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
                     <i className="icon-heart text-12" />
@@ -105,12 +121,12 @@ const HotelProperties = () => {
             </div>
             <div className="hotelsCard__content mt-10">
               <h4 className="hotelsCard__title text-dark-1 text-18 lh-16 fw-500">
-                <span>{item?.title}</span>
+                <span>{item?.eventName}</span>
               </h4>
               <p className="text-light-1 lh-14 text-14 mt-5">
                 {item?.location}
               </p>
-              <div className="d-flex items-center mt-20">
+              {/* <div className="d-flex items-center mt-20">
                 <div className="flex-center bg-blue-1 rounded-4 size-30 text-12 fw-600 text-white">
                   {item?.ratings}
                 </div>
@@ -120,16 +136,16 @@ const HotelProperties = () => {
                 <div className="text-14 text-light-1 ml-10">
                   {item?.numberOfReviews} reviews
                 </div>
-              </div>
-              <div className="mt-5">
+              </div> */}
+              {/* <div className="mt-5">
                 <div className="fw-500">
                   Starting from{" "}
-                  <span className="text-blue-1">US${item?.price}</span>
+                  <span className="text-blue-1">INR${item?.price}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Link>
-        </div>
+        </Link>
       ))}
     </>
   );

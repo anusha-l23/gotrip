@@ -20,6 +20,8 @@ import FilterBox2 from "@/components/hotel-single/filter-box-2";
 import StickyHeader2 from "@/components/hotel-single/StickyHeader2";
 import GalleryTwo from "@/components/hotel-single/GalleryTwo";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -30,7 +32,24 @@ const metadata = {
 
 const HotelSingleV2Dynamic = () => {
   let params = useParams();
+
+  const [events, setEvents] = useState([])
+  const fetchData = async()=> {
+    const response = await axios.get("http://localhost:3001/santarun/get-results");
+    setEvents(response.data);
+  
+  }
+
+  useEffect(()=>{
+fetchData();
+  },[])
   const id = params.id;
+
+  console.log(events, "events")
+  
+  const event = events.find((item) => item && String(item.id) === id);
+console.log(typeof id, "id")
+console.log(event, "event");
   const hotel = hotelsData.find((item) => item.id == id) || hotelsData[0];
 
   return (
@@ -59,8 +78,8 @@ const HotelSingleV2Dynamic = () => {
       <StickyHeader2 hotel={hotel} />
  
 
-      <GalleryTwo hotel={hotel} />
-
+      {/* <GalleryTwo hotel={hotel} />  */}
+  <GalleryTwo event={event} />
       {/* End gallery grid wrapper */}
 
       {/* <section className="pt-30">
@@ -88,7 +107,7 @@ const HotelSingleV2Dynamic = () => {
           </div>
           {/* End .row */}
 
-          <AvailableRooms2 hotel={hotel} />
+          <AvailableRooms2 event={event} />
         </div>
         {/* End .container */}
       </section>

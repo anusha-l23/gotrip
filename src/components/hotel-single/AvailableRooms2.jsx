@@ -1,4 +1,6 @@
-const AvailableRooms2 = ({ hotel }) => {
+import {useState} from "react";
+
+const AvailableRooms2 = ({ event }) => {
   const demoContent = [
     {
       id: 1,
@@ -19,6 +21,47 @@ const AvailableRooms2 = ({ hotel }) => {
     //   ],
     // },
   ];
+  const buttonStyle = {
+    border:"1px solid lightgray",
+    borderRadius:"50%",
+    backgroundColor:"white",
+    paddingLeft:"0.7em",
+    paddingRight:"0.7em",
+    
+  }
+const box = {
+  border:"1px solid lightgray",
+padding:"0.2em 1em"
+}
+
+
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const [categoryCounts, setCategoryCounts] = useState({});
+
+const handleIncrement = (categoryName, amount) => {
+  setCategoryCounts((prevCounts) => ({
+    ...prevCounts,
+    [categoryName]: (prevCounts[categoryName] || 0) + 1,
+  }));
+
+  setTotalCount((prevTotalCount) => prevTotalCount + 1);
+  setTotalAmount((prevTotalAmount) => prevTotalAmount + amount);
+};
+
+
+const handleDecrement = (categoryName, amount) => {
+  if (categoryCounts[categoryName] > 0) {
+    setCategoryCounts((prevCounts) => ({
+      ...prevCounts,
+      [categoryName]: prevCounts[categoryName] - 1,
+    }));
+
+    setTotalCount((prevTotalCount) => prevTotalCount - 1);
+    setTotalAmount((prevTotalAmount) => prevTotalAmount - amount);
+  }
+}
+
   return (
     <>
       {demoContent.map((item) => (
@@ -38,7 +81,7 @@ const AvailableRooms2 = ({ hotel }) => {
               {/* image */}
 
               <div>
-                <div className="text-18 fw-500 mt-10">Standard Twin Room</div>
+                <div className="text-18 fw-500 mt-10">{event?.eventName}</div>
                 {/* <div className="y-gap-5 pt-5">
                   <div className="d-flex items-center">
                     <i className="icon-no-smoke text-20 mr-10" />
@@ -99,7 +142,7 @@ const AvailableRooms2 = ({ hotel }) => {
                     </div>
                     {/* End .col */}
 
-                    <div className="col-lg-auto col-md-6 border-left-light lg:border-none">
+                    {/* <div className="col-lg-auto col-md-6 border-left-light lg:border-none">
                       <div className="px-40 lg:px-0">
                         <div className="text-15 fw-500 mb-20">Sleeps</div>
                         <div className="d-flex items-center text-light-1">
@@ -107,14 +150,14 @@ const AvailableRooms2 = ({ hotel }) => {
                           <div className="icon-man text-24" />
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     {/* End .col */}
 
                     <div className="col-lg-auto col-md-6 border-left-light lg:border-none">
                       <div className="px-40 lg:px-0">
                         <div className="text-15 fw-500 mb-20">Select Participants</div>
                         <div className="dropdown js-dropdown js-price-1-active">
-                          <select
+                          {/* <select
                             style={{ minWidth: "160px" }}
                             className="form-select dropdown__button d-flex items-center rounded-4 border-light px-15 h-50 text-14"
                           >
@@ -125,7 +168,39 @@ const AvailableRooms2 = ({ hotel }) => {
                             <option value="3"> 3 (US$ 3,120)</option>
                             <option value="4"> 4 (US$ 3,120)</option>
                             <option value="5"> 5 (US$ 3,120)</option>
-                          </select>
+                          </select> */}
+
+
+<table className="table table-bordered" style={{borderBottom:"1px solid lightgray"}}>
+  <thead className="thead-light">
+    <tr>
+      <th scope="col">event</th>
+      <th scope="col">Amount (INR)</th>
+      <th scope="col">Selected<br/> <span style={{textAlign:"center", color:"red"}}>{totalCount}</span></th>
+      <th scope="col" className="text-center">Total Amount <br/> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M13.725 21L7 14v-2h3.5q1.325 0 2.288-.862T13.95 9H6V7h7.65q-.425-.875-1.263-1.437T10.5 5H6V3h12v2h-3.25q.35.425.625.925T15.8 7H18v2h-2.025q-.2 2.125-1.75 3.563T10.5 14h-.725l6.725 7z"></path></svg> <span style={{textAlign:"center", color:"red"}}>{totalAmount}</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    {event?.categoryDetails.map((item)=>{
+      return (
+        <tr key={item.id}>
+        <td>{item?.name}</td>
+          <td>{item?.amount}</td>
+         
+<td>
+  <div className="d-flex flex-inline gap-4">     <button style={buttonStyle} onClick={() => handleDecrement(item.name, Number(item.amount))}>&#x2012;</button>
+              <div style={box}>{categoryCounts[item.name] || 0}</div>
+              <button style={buttonStyle} onClick={() => handleIncrement(item.name, Number(item.amount))}>+</button>
+              </div>
+
+          </td>
+          <td><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M13.725 21L7 14v-2h3.5q1.325 0 2.288-.862T13.95 9H6V7h7.65q-.425-.875-1.263-1.437T10.5 5H6V3h12v2h-3.25q.35.425.625.925T15.8 7H18v2h-2.025q-.2 2.125-1.75 3.563T10.5 14h-.725l6.725 7z"></path></svg> {categoryCounts[item.name] ? categoryCounts[item.name] * Number(item.amount) : 0}</td>
+        </tr>
+      )
+    })}
+  </tbody>
+</table>
+
                         </div>
                       </div>
                     </div>
