@@ -89,14 +89,14 @@ const MobileMenu = () => {
           </SubMenu> */}
           {/* End  All Home Menu */}
           <MenuItem
-            onClick={() => navigate("/home_4")}
-            className={pathname === "/home_4" ? "menu-active-link" : ""}
+            onClick={() => navigate("/hotel-list-v5")}
+            className={pathname === "/hotel-list-v5" ? "menu-active-link" : ""}
           >
             Events
           </MenuItem>
           <MenuItem
-            onClick={() => navigate("/hotel-list-v5")}
-            className={pathname === "/hotel-list-v5" ? "menu-active-link" : ""}
+            onClick={() => navigate("/hotel-list-v6")}
+            className={pathname === "/hotel-list-v6" ? "menu-active-link" : ""}
           >
             Results
           </MenuItem>

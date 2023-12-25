@@ -30,7 +30,6 @@ const RatingBox = ({ hotel }) => {
           </div>
         </div>
       </div>
-      {/* End d-flex */}
 
       <div className="d-flex mt-20">
         <i className="icon-group text-16 mr-10 pt-5" />
@@ -38,7 +37,6 @@ const RatingBox = ({ hotel }) => {
           Highly rated by guests – 86% would recommend
         </div>
       </div>
-      {/* End d-flex */}
 
       <div className="border-top-light mt-20 mb-20" />
 

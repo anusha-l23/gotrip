@@ -868,10 +868,15 @@ $_displays: none, inline-block, block, flex;
 }
 
 .galleryGrid.-type-2 {
+  // display: grid;
+  // grid-template-columns: 0.6fr 0.2fr 0.2fr;
+  // grid-template-rows: 0.4fr 0.6fr;
+  // gap: 10px;
   display: grid;
-  grid-template-columns: 0.6fr 0.2fr 0.2fr;
-  grid-template-rows: 0.4fr 0.6fr;
-  gap: 10px;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  justify-items: center; 
+  align-items: center; 
 
   @include media-below(md) {
     grid-template-columns: 1fr 1fr;

@@ -52,6 +52,7 @@ import HotelListPage2 from "./pages/hotel/hotel-list-v2";
 import HotelListPage3 from "./pages/hotel/hotel-list-v3";
 import HotelListPage4 from "./pages/hotel/hotel-list-v4";
 import HotelListPage5 from "./pages/hotel/hotel-list-v5";
+import HotelListPage6 from "./pages/hotel/hotel-list-v6";
 import HotelSingleV1Dynamic from "./pages/hotel/hotel-single-v1";
 import HotelSingleV2Dynamic from "./pages/hotel/hotel-single-v2";
 import BookingPage from "./pages/hotel/booking-page";
@@ -142,6 +143,7 @@ function App() {
               <Route path="hotel-list-v3" element={<HotelListPage3 />} />
               <Route path="hotel-list-v4" element={<HotelListPage4 />} />
               <Route path="hotel-list-v5" element={<HotelListPage5 />} />
+              <Route path="hotel-list-v6" element={<HotelListPage6 />} />
               <Route
                 path="hotel-single-v1/:id"
                 element={<HotelSingleV1Dynamic />}

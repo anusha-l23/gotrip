@@ -1,7 +1,7 @@
 import CallToActions from "@/components/common/CallToActions";
 import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
-import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v5/MainFilterSearchBox";
+import MainFilterSearchBox1 from "@/components/hotel-list/hotel-list-v5/MainFilterSearchBox1";
 import Pagination from "@/components/hotel-list/common/Pagination";
 import HotelProperties from "@/components/hotel-list/hotel-list-v5/HotelProperties";
 import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBar";
@@ -13,7 +13,7 @@ const metadata = {
   description: "GoTrip - Travel & Tour ReactJs Template",
 };
 
-const HotelListPage5 = () => {
+const HotelListPage6 = () => {
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -44,7 +44,7 @@ const HotelListPage5 = () => {
                 </h1>
               </div>
               {/* End text-center */}
-              <MainFilterSearchBox />
+              <MainFilterSearchBox1 />
             </div>
             {/* End col-12 */}
           </div>
@@ -104,4 +104,4 @@ const HotelListPage5 = () => {
   );
 };
 
-export default HotelListPage5;
+export default HotelListPage6;

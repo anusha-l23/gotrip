@@ -5,19 +5,19 @@ const AvailableRooms2 = ({ hotel }) => {
       marginTop: "mt-0",
       items: [
         { id: 1, marginTop: "mt-0" },
-        { id: 2, marginTop: "mt-20" },
-        { id: 3, marginTop: "mt-20" },
+        // { id: 2, marginTop: "mt-20" },
+        // { id: 3, marginTop: "mt-20" },
       ],
     },
-    {
-      id: 2,
-      marginTop: "mt-30",
-      items: [
-        { id: 1, marginTop: "mt-0" },
-        { id: 2, marginTop: "mt-20" },
-        { id: 3, marginTop: "mt-20" },
-      ],
-    },
+    // {
+    //   id: 2,
+    //   marginTop: "mt-30",
+    //   items: [
+    //     { id: 1, marginTop: "mt-0" },
+    //     { id: 2, marginTop: "mt-20" },
+    //     { id: 3, marginTop: "mt-20" },
+    //   ],
+    // },
   ];
   return (
     <>
@@ -39,7 +39,7 @@ const AvailableRooms2 = ({ hotel }) => {
 
               <div>
                 <div className="text-18 fw-500 mt-10">Standard Twin Room</div>
-                <div className="y-gap-5 pt-5">
+                {/* <div className="y-gap-5 pt-5">
                   <div className="d-flex items-center">
                     <i className="icon-no-smoke text-20 mr-10" />
                     <div className="text-15">Non-smoking rooms</div>
@@ -56,13 +56,13 @@ const AvailableRooms2 = ({ hotel }) => {
                     <i className="icon-kitchen text-20 mr-10" />
                     <div className="text-15">Kitchen</div>
                   </div>
-                </div>
-                <a
+                </div> */}
+                {/* <a
                   href="#"
                   className="d-block text-15 fw-500 underline text-blue-1 mt-15"
                 >
                   Show Room Information
-                </a>
+                </a> */}
               </div>
             </div>
             {/* End col-xl-atuo */}
@@ -112,7 +112,7 @@ const AvailableRooms2 = ({ hotel }) => {
 
                     <div className="col-lg-auto col-md-6 border-left-light lg:border-none">
                       <div className="px-40 lg:px-0">
-                        <div className="text-15 fw-500 mb-20">Select Rooms</div>
+                        <div className="text-15 fw-500 mb-20">Select Participants</div>
                         <div className="dropdown js-dropdown js-price-1-active">
                           <select
                             style={{ minWidth: "160px" }}
@@ -129,9 +129,8 @@ const AvailableRooms2 = ({ hotel }) => {
                         </div>
                       </div>
                     </div>
-                    {/* End .col */}
 
-                    <div className="col-lg-auto col-md-6 border-left-light lg:border-none text-right lg:text-left">
+                    {/* <div className="col-lg-auto col-md-6 border-left-light lg:border-none text-right lg:text-left">
                       <div className="pl-40 lg:pl-0">
                         <div className="text-14 lh-14 text-light-1 mb-5">
                           3 rooms for
@@ -146,8 +145,8 @@ const AvailableRooms2 = ({ hotel }) => {
                           Reserve <div className="icon-arrow-top-right ml-15" />
                         </a>
                       </div>
-                    </div>
-                    {/* End .col */}
+                    </div> */}
+           
                   </div>
                 </div>
               ))}

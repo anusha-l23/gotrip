@@ -71,26 +71,28 @@ const Home_4 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
+
           <FilterHotels4 />
         </div>
-        {/* End .container */}
-      </section>
-      {/* End Popular Hotels Section */}
 
-      <ParallaxBanner />
+      </section>
+    
+
+      {/* <ParallaxBanner /> */}
       {/* End Parallax banner Section */}
 
-      <section className="pt-50 pb-40 border-bottom-light">
+      {/* <section className="pt-50 pb-40 border-bottom-light">
         <div className="container">
           <div className="row justify-center text-center">
             <Counter />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End counter up Section */}
 
-      <section className="layout-pt-lg layout-pb-md">
+      {/* <section className="layout-pt-lg layout-pb-md"> */}
+      <section className="layout-pb-md">
+      
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -101,20 +103,18 @@ const Home_4 = () => {
                 </p>
               </div>
             </div>
-            {/* End .col */}
+    
           </div>
-          {/* End .row */}
-
           <div className="row y-gap-40 justify-between pt-50">
             <BlockGuide />
           </div>
-          {/* End .row */}
+      
         </div>
-        {/* End .container */}
-      </section>
-      {/* Block Guide Section */}
+     
+      </section> 
+  
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
@@ -125,26 +125,26 @@ const Home_4 = () => {
                 </p>
               </div>
             </div>
-            {/* End .col-auto */}
+
 
             <div className="col-auto tabs -pills-2 ">
               <div className="tabs__controls row x-gap-10 justify-center js-tabs-controls"></div>
             </div>
-            {/* End .col-auto */}
+     
           </div>
-          {/* End .row */}
+ 
 
           <div className="relative  pt-40 sm:pt-20">
             <div className="row y-gap-30">
               <Hotels3 />
             </div>
           </div>
-          {/* End relative */}
+         
         </div>
-      </section>
-      {/* End Best Seller Hotels Sections */}
+      </section> */}
+     
 
-      <section className="section-bg layout-pt-lg layout-pb-lg">
+      {/* <section className="section-bg layout-pt-lg layout-pb-lg">
         <div className="section-bg__item -mx-20 bg-light-2" />
         <div className="container">
           <div className="row justify-center text-center">
@@ -159,33 +159,33 @@ const Home_4 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
+   
 
           <div className="relative mt-80 md:mt-40  position-relative">
             <Testimonial />
           </div>
-          {/* End .overflow-hidden */}
+        
 
           <div className="row y-gap-30 items-center pt-40 sm:pt-20">
             <div className="col-xl-4">
               <Counter2 />
             </div>
-            {/* End .col */}
+          
 
             <div className="col-xl-8">
               <div className="row y-gap-30 justify-between items-center">
                 <Brand />
               </div>
             </div>
-            {/* End .col */}
+           
           </div>
-          {/* End .row */}
+    
         </div>
-        {/* End .container */}
-      </section>
-      {/* End testimonial section */}
+  
+      </section> */}
+    
 
-      <section className="layout-pt-lg layout-pb-lg">
+      {/* <section className="layout-pt-lg layout-pb-lg">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -199,21 +199,21 @@ const Home_4 = () => {
               </div>
             </div>
           </div>
-          {/* End .row  */}
+     
           <div className="row y-gap-30 pt-40">
             <Blog4 />
           </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End blog Section */}
 
-      <CallToActions />
-      {/* End Call To Actions Section */}
+        </div>
+  
+      </section> */}
+
+
+      {/* <CallToActions /> */}
+ 
 
       <DefaultFooter />
-      {/* End Footer Section */}
+
     </>
   );
 };

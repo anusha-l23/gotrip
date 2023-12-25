@@ -48,10 +48,10 @@ const MainMenu = ({ style = "" }) => {
         {/* End home page menu */}
 
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link to="/home_4">Events</Link>
+          <Link to="/hotel-list-v5">Events</Link>
         </li>
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link to="/hotel-list-v5">Results</Link>
+          <Link to="/hotel-list-v6">Results</Link>
         </li>
         <li
           className={`${

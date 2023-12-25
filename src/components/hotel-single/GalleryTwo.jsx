@@ -51,7 +51,7 @@ export default function GalleryTwo({ hotel }) {
                   </div>
                   {/* End .galleryGrid__item */}
 
-                  <div className="galleryGrid__item">
+                  {/* <div className="galleryGrid__item">
                     <Item
                       original="/img/gallery/1/2.png"
                       thumbnail="/img/gallery/1/2.png"
@@ -69,10 +69,10 @@ export default function GalleryTwo({ hotel }) {
                         />
                       )}
                     </Item>
-                  </div>
+                  </div> */}
                   {/* End .galleryGrid__item */}
 
-                  <div className="galleryGrid__item">
+                  {/* <div className="galleryGrid__item">
                     <Item
                       original="/img/gallery/1/3.png"
                       thumbnail="/img/gallery/1/3.png"
@@ -90,10 +90,10 @@ export default function GalleryTwo({ hotel }) {
                         />
                       )}
                     </Item>
-                  </div>
+                  </div> */}
                   {/* End .galleryGrid__item */}
 
-                  <div className="galleryGrid__item relative d-flex justify-end items-end">
+                  {/* <div className="galleryGrid__item relative d-flex justify-end items-end">
                     <img
                       src="/img/gallery/1/4.png"
                       alt="image"
@@ -118,7 +118,7 @@ export default function GalleryTwo({ hotel }) {
                         )}
                       </Item>
                     </div>
-                  </div>
+                  </div> */}
                   {/* End .galleryGrid__item */}
                 </div>
               </Gallery>
@@ -132,7 +132,7 @@ export default function GalleryTwo({ hotel }) {
                         {hotel?.title?.slice(0, 30)}
                       </h1>
                     </div>
-                    {/* End .col */}
+              
                     <div className="col-auto">
                       <i className="icon-star text-10 text-yellow-1" />
                       <i className="icon-star text-10 text-yellow-1" />
@@ -141,7 +141,7 @@ export default function GalleryTwo({ hotel }) {
                       <i className="icon-star text-10 text-yellow-1" />
                     </div>
                   </div>
-                  {/* End .row */}
+          
 
                   <div className="row x-gap-20 y-gap-20 items-center">
                     <div className="col-auto">
@@ -159,27 +159,27 @@ export default function GalleryTwo({ hotel }) {
                       </button>
                     </div>
                   </div>
-                  {/* End .row */}
+             
                 </div>
-                {/* End .col */}
+          
 
                 <div className="col-auto">
                   <div className="text-14 text-md-end">
                     From{" "}
                     <span className="text-22 text-dark-1 fw-500">
-                      US${hotel?.price}
+                      INR<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m13.425 20.7l-6.15-6.4q-.125-.125-.2-.312T7 13.6V13q0-.425.288-.712T8 12h2.5q1.325 0 2.288-.862T13.95 9H7q-.425 0-.712-.288T6 8q0-.425.288-.712T7 7h6.65q-.425-.875-1.263-1.437T10.5 5H7q-.425 0-.712-.288T6 4q0-.425.288-.712T7 3h10q.425 0 .713.288T18 4q0 .425-.288.713T17 5h-2.25q.35.425.625.925T15.8 7H17q.425 0 .713.288T18 8q0 .425-.288.713T17 9h-1.025q-.2 2.125-1.75 3.563T10.5 14h-.725l5.1 5.3q.45.475.188 1.088T14.15 21q-.2 0-.387-.075t-.338-.225"></path></svg>{hotel?.price}
                     </span>
                   </div>
                   <a
                     href="#"
                     className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                   >
-                    Select Room <div className="icon-arrow-top-right ml-15" />
+                    Register <div className="icon-arrow-top-right ml-15" />
                   </a>
                 </div>
-                {/* End .col */}
+            
               </div>
-              {/* End .row */}
+     
 
               <div id="overview" className="row y-gap-40 pt-40 ">
                 <div className="col-12">
@@ -189,22 +189,23 @@ export default function GalleryTwo({ hotel }) {
 
                 <div className="col-12">
                   <h3 className="text-22 fw-500 pt-40 border-top-light">
-                    Most Popular Facilities
+                  
+                    Give Away
                   </h3>
                   <div className="row y-gap-10 pt-20">
                     <PopularFacilities />
                   </div>
                 </div>
-                {/* End .col-12  */}
+           
               </div>
-              {/* End .col-12  Overview */}
+          
             </div>
-            {/* End left hotel galler  */}
+        
 
             <div>
               <SidebarRight2 />
-              <RatingBox hotel={hotel} />
-              <PropertyHighlights2 />
+              {/* <RatingBox hotel={hotel} />
+              <PropertyHighlights2 /> */}
             </div>
             {/* End right content */}
           </div>

@@ -44,7 +44,7 @@ const HotelSingleV2Dynamic = () => {
       <DefaultHeader />
       {/* End DefaultHeader */}
 
-      <div className="py-10 bg-dark-2">
+      {/* <div className="py-10 bg-dark-2">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -52,38 +52,38 @@ const HotelSingleV2Dynamic = () => {
             </div>
           </div>
         </div>
-        {/* End .contaienr */}
-      </div>
-      {/* End Search filter top */}
+
+      </div> */}
+ 
 
       <StickyHeader2 hotel={hotel} />
-      {/* End StickyHeader2 */}
-
-      <TopBreadCrumb />
-      {/* End top breadcrumb */}
+ 
 
       <GalleryTwo hotel={hotel} />
 
       {/* End gallery grid wrapper */}
 
-      <section className="pt-30">
+      {/* <section className="pt-30">
         <div className="container">
           <div className="row y-gap-30">
             <div className="col-12">
               <RatingTag />
             </div>
-            {/* End .col-12 This property is in high demand! */}
+     
           </div>
         </div>
-        {/* End container */}
-      </section>
+     
+      </section> */}
       {/* End single page content */}
 
-      <section id="rooms" className="pt-30">
+      <section id="categories" className="pt-30">
         <div className="container">
           <div className="row pb-20">
             <div className="col-auto">
-              <h3 className="text-22 fw-500">Available Rooms</h3>
+              <h3 className="text-22 fw-500">
+                {/* Available Rooms */}
+                Choose Your Categories
+                </h3>
             </div>
           </div>
           {/* End .row */}
@@ -94,7 +94,7 @@ const HotelSingleV2Dynamic = () => {
       </section>
       {/* End Available Rooms */}
 
-      <section className="mt-40" id="facilities">
+      {/* <section className="mt-40" id="facilities">
         <div className="container">
           <div className="row x-gap-40 y-gap-40">
             <div className="col-12">
@@ -102,47 +102,46 @@ const HotelSingleV2Dynamic = () => {
               <div className="row x-gap-40 y-gap-40 pt-20">
                 <Facilities />
               </div>
-              {/* End .row */}
+       
             </div>
-            {/* End .col-12 */}
+         
           </div>
-          {/* End .row */}
+   
         </div>
-        {/* End .container */}
-      </section>
-      {/* End facilites section */}
 
-      <div className="container mt-40 mb-40">
+      </section> */}
+   
+
+      {/* <div className="container mt-40 mb-40">
         <div className="border-top-light"></div>
-      </div>
-
+      </div> */}
+{/* 
       <section className="pt-40" id="reviews">
         <div className="container">
           <div className="row y-gap-40 justify-between">
             <div className="col-xl-3">
               <h3 className="text-22 fw-500">Guest reviews</h3>
               <ReviewProgress2 />
-              {/* End review with progress */}
+         
             </div>
-            {/* End col-xl-3 */}
+
 
             <div className="col-xl-8">
               <DetailsReview2 />
             </div>
-            {/* End col-xl-8 */}
+
           </div>
-          {/* End .row */}
+
         </div>
-        {/* End .container */}
-        {/* End container */}
-      </section>
-      {/* End Review section */}
 
-      <div className="container mt-40 mb-40">
+      </section> */}
+
+
+      {/* <div className="container mt-40 mb-40">
         <div className="border-top-light"></div>
-      </div>
+      </div> */}
 
-      <section>
+      {/* <section>
         <div className="container">
           <div className="row y-gap-30 justify-between">
             <div className="col-xl-3">
@@ -154,25 +153,18 @@ const HotelSingleV2Dynamic = () => {
                   </p>
                 </div>
               </div>
-              {/* End .row */}
-
               <ReplyFormReview2 />
-              {/* End ReplyFormReview */}
+        
             </div>
-            {/* End .col-xl-3 */}
-
             <div className="col-xl-8">
               <ReplyForm />
             </div>
-            {/* End .col-xl-8 */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
-      </section>
-      {/* End Reply Comment box section */}
+      </section> */}
 
-      <section className="pt-40">
+
+      {/* <section className="pt-40">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -197,28 +189,28 @@ const HotelSingleV2Dynamic = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End health &  safety measures section */}
 
-      <section className="pt-40">
+      {/* <section className="pt-40">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <h3 className="text-22 fw-500">Hotel surroundings</h3>
             </div>
           </div>
-          {/* End .row */}
+       
 
           <div className="row x-gap-50 y-gap-30 pt-20">
             <Surroundings />
           </div>
-          {/* End .row */}
+        
         </div>
-        {/* End .container */}
-      </section>
+   
+      </section> */}
       {/* End hotel surroundings */}
 
-      <section className="pt-40">
+      {/* <section className="pt-40">
         <div className="container">
           <div className="pt-40 border-top-light">
             <div className="row">
@@ -226,17 +218,17 @@ const HotelSingleV2Dynamic = () => {
                 <h3 className="text-22 fw-500">Some helpful facts</h3>
               </div>
             </div>
-            {/* End .row */}
+     
 
             <div className="row x-gap-50 y-gap-30 pt-20">
               <HelpfulFacts />
             </div>
-            {/* End .row */}
+    
           </div>
-          {/* End .pt-40 */}
+    
         </div>
-        {/* End .container */}
-      </section>
+    
+      </section> */}
       {/* End helpful facts surroundings */}
 
       <section id="faq" className="pt-40 layout-pb-md">
@@ -249,24 +241,19 @@ const HotelSingleV2Dynamic = () => {
                   <br /> The Crown Hotel
                 </h2>
               </div>
-              {/* End .row */}
 
               <div className="col-lg-8">
                 <div className="accordion -simple row y-gap-20 js-accordion">
                   <Faq />
                 </div>
               </div>
-              {/* End .col */}
             </div>
-            {/* End .row */}
           </div>
-          {/* End .pt-40 */}
         </div>
-        {/* End .container */}
       </section>
       {/* End Faq about sections */}
 
-      <section className="layout-pt-md layout-pb-lg">
+      {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row justify-center text-center">
             <div className="col-auto">
@@ -278,22 +265,16 @@ const HotelSingleV2Dynamic = () => {
                   Interdum et malesuada fames ac ante ipsum
                 </p>
               </div>
-              {/* End sectionTitle */}
             </div>
-            {/* End .col */}
           </div>
-          {/* End .row */}
-
           <div className="pt-40 sm:pt-20 item_gap-x30">
             <Hotels2 />
           </div>
-          {/* End slide hotel */}
         </div>
-        {/* End .container */}
-      </section>
+      </section> */}
       {/* End similar hotel */}
 
-      <CallToActions />
+      {/* <CallToActions /> */}
       {/* End Call To Actions Section */}
 
       <DefaultFooter />
