@@ -13,7 +13,7 @@ const metadata = {
   description: "GoTrip - Travel & Tour ReactJs Template",
 };
 
-const HotelListPage5 = () => {
+const Events = () => {
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -84,4 +84,4 @@ const HotelListPage5 = () => {
   );
 };
 
-export default HotelListPage5;
+export default Events;

@@ -58,7 +58,7 @@ export const servicesItems = [
   },
   {
     name: "Results",
-    routePath: "/hotel-list-v5",
+    routePath: "/hotel-list-v6",
   },
   {
     name: "Photos",

@@ -52,19 +52,16 @@ fetchData();
     <>
       {events.map((item) => (
         
-        <Link to={{
-          pathname: "/hotel-single-v2/1",
-          // search: `?event=${encodeURIComponent(item.eventName)}`,
-        }}
-          className="col-lg-3 col-sm-6"
-          key={item?.id}
-          data-aos="fade"
-          data-aos-delay={item.delayAnimation}
+        <div
+        className="col-lg-3 col-sm-6"
+        key={item?.id}
+        data-aos="fade"
+        data-aos-delay={item.delayAnimation}
+      >
+        <Link
+          to={`/hotel-single-v2/${item.id}`}
+          className="hotelsCard -type-1 hover-inside-slider"
         >
-          <Link
-            to={`/hotel-single-v2/${item.id}`}
-            className="hotelsCard -type-1 hover-inside-slider"
-          >
             <div className="hotelsCard__image">
               <div className="cardImage inside-slider">
                 {/* <Slider
@@ -145,7 +142,7 @@ fetchData();
               </div> */}
             </div>
           </Link>
-        </Link>
+        </div>
       ))}
     </>
   );

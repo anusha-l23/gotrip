@@ -38,8 +38,8 @@ import BVVendorHotel from "./pages/dashboard/vendor-dashboard/hotels";
 import BDVendorRecovery from "./pages/dashboard/vendor-dashboard/recovery";
 import VendorDashboard from "./pages/dashboard/vendor-dashboard/dashboard";
 
-import HotelListPage5 from "./pages/hotel/hotel-list-v5";
-import HotelListPage6 from "./pages/hotel/hotel-list-v6";
+import Events from "./pages/hotel/hotel-list-v5";
+import Results from "./pages/hotel/hotel-list-v6";
 
 import HotelSingleV2Dynamic from "./pages/hotel/hotel-single-v2";
 import BookingPage from "./pages/hotel/booking-page";
@@ -62,12 +62,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Home />} />
-           
-       
               <Route path="home_4" element={<Home_4 />} />
-             
-
-              
               <Route path="404" element={<NotFoundPage />} />
               <Route path="*" element={<NotFoundPage />} />
 
@@ -94,8 +89,8 @@ function App() {
                 <Route path="recovery" element={<BDVendorRecovery />} />
               </Route>
 
-              <Route path="hotel-list-v5" element={<HotelListPage5 />} />
-              <Route path="hotel-list-v6" element={<HotelListPage6 />} />
+              <Route path="events" element={<Events />} />
+              <Route path="results" element={<Results />} />
             
               <Route
                 path="hotel-single-v2/:id"

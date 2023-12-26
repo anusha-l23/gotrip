@@ -22,7 +22,7 @@ const MainMenu = ({ style = "" }) => {
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
-        <li
+        {/* <li
           className={`${
             isActiveParentChaild(homeItems, pathname) ? "current" : ""
           } menu-item-has-children`}
@@ -43,13 +43,13 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
 
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link to="/hotel-list-v5">Events</Link>
+          <Link to="/events">Events</Link>
         </li>
         <li className={pathname === "/contact" ? "current" : ""}>
-          <Link to="/hotel-list-v6">Results</Link>
+          <Link to="/results">Results</Link>
         </li>
         <li
           className={`${
