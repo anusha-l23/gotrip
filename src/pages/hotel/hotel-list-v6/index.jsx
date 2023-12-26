@@ -1,9 +1,7 @@
-//import CallToActions from "@/components/common/CallToActions";
 import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
 import MainFilterSearchBox1 from "@/components/hotel-list/hotel-list-v5/MainFilterSearchBox1";
 import Pagination from "@/components/hotel-list/common/Pagination";
-//import HotelProperties from "@/components/hotel-list/hotel-list-v5/HotelProperties";
 import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBar";
 
 import MetaComponent from "@/components/common/MetaComponent";
@@ -17,14 +15,8 @@ const HotelListPage6 = () => {
   return (
     <>
       <MetaComponent meta={metadata} />
-      {/* End Page Title */}
-
       <div className="header-margin"></div>
-      {/* header top margin */}
-
       <Header11 />
-      {/* End Header 1 */}
-
       <section className="section-bg pt-40 pb-40 relative z-5">
         <div className="section-bg__item col-12">
           <img
@@ -33,8 +25,6 @@ const HotelListPage6 = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        {/* End .section-bg__item */}
-
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -43,15 +33,11 @@ const HotelListPage6 = () => {
                   Find Your Dream Luxury Hotel
                 </h1>
               </div>
-              {/* End text-center */}
               <MainFilterSearchBox1 />
             </div>
-            {/* End col-12 */}
           </div>
         </div>
       </section>
-      {/* Top SearchBanner */}
-
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-20 justify-between items-center">
@@ -60,18 +46,14 @@ const HotelListPage6 = () => {
                 <div className="col-auto">
                   <div className="text-18 fw-500">Filter</div>
                 </div>
-                {/* End .col-auto */}
 
                 <div className="col-auto">
                   <div className="row x-gap-15 y-gap-15">
                     <DropdownSelelctBar />
                   </div>
                 </div>
-                {/* End .col-auto */}
               </div>
-              {/* End .row */}
             </div>
-            {/* End col-auto */}
 
             <div className="col-auto">
               <button className="button -blue-1 h-40 px-20 rounded-100 bg-blue-1-05 text-15 text-blue-1">
@@ -79,27 +61,17 @@ const HotelListPage6 = () => {
                 Top picks for your search
               </button>
             </div>
-            {/* End col-auto */}
 
             <div className="border-top-light mt-30 mb-30"></div>
-            {/* End border-top */}
 
             <h1 className="row y-gap-30">
 
               Latest Results
-              {/* <HotelProperties /> */}
             </h1>
-            {/* End .row */}
             <Pagination />
           </div>
-          {/* End .row */}
         </div>
-        {/* End .container */}
       </section>
-      {/* End layout for listing sidebar and content */}
-
-      {/* <CallToActions /> */}
-      {/* End Call To Actions Section */}
 
       <DefaultFooter />
     </>

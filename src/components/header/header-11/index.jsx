@@ -34,40 +34,22 @@ const Header1 = () => {
                   <img src="/img/general/logo-light.svg" alt="logo icon" />
                   <img src="/img/general/logo-dark.svg" alt="logo icon" />
                 </Link>
-                {/* End logo */}
 
                 <div className="header-menu">
                   <div className="header-menu__content">
                     <MainMenu style="text-white" />
                   </div>
                 </div>
-                {/* End header-menu */}
+
               </div>
-              {/* End d-flex */}
+
             </div>
-            {/* End col */}
 
             <div className="col-auto">
               <div className="d-flex items-center">
-                {/* <div className="row x-gap-20 items-center xxl:d-none">
-                  <CurrenctyMegaMenu textClass="text-white" />
-          
-                  <div className="col-auto">
-                    <div className="w-1 h-20 bg-white-20" />
-                  </div>
-                
-
-                  <LanguageMegaMenu textClass="text-white" />
-           
-                </div> */}
-          
+               
                 <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  {/* <Link
-                    to="/login"
-                    className="button px-30 fw-400 text-14 -white bg-white h-50 text-dark-1"
-                  >
-                    Become An Expert
-                  </Link> */}
+             
                   <Link
                     to="/signup"
                     className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
@@ -75,9 +57,6 @@ const Header1 = () => {
                     Sign In / Register
                   </Link>
                 </div>
-                {/* End btn-group */}
-
-                {/* Start mobile menu icon */}
                 <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-white">
                   <div>
                     <Link
@@ -101,18 +80,13 @@ const Header1 = () => {
                       data-bs-scroll="true"
                     >
                       <MobileMenu />
-                      {/* End MobileMenu */}
                     </div>
                   </div>
                 </div>
-                {/* End mobile menu icon */}
               </div>
             </div>
-            {/* End col-auto */}
           </div>
-          {/* End .row */}
         </div>
-        {/* End header_container */}
       </header>
     </>
   );
