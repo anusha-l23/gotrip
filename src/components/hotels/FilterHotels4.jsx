@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FilterHotelsTabs2 from "./filter-tabs/FilterHotelsTabs2";
+
 import FilterHotels2 from "./FilterHotels2";
 import { Link } from "react-router-dom";
 
@@ -7,10 +7,7 @@ export default function FilterHotels4() {
   const [filterOption, setFilterOption] = useState("new_york");
   return (
     <div className="tabs -pills-2 pt-40">
-      {/* <FilterHotelsTabs2
-        filterOption={filterOption}
-        setFilterOption={setFilterOption}
-      /> */}
+    
       <div className="tabs__content pt-40">
         <div className="row y-gap-30">
           <FilterHotels2 filterOption={filterOption}/>

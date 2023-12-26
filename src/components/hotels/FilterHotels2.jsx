@@ -63,10 +63,11 @@ fetchData();
           data-aos="fade"
           data-aos-delay={item.delayAnimation}
         >
-          <Link
-            to={`/hotel-single-v1/${item.id}`}
+         <Link
+            to={`/hotel-single-v2/${item.id}`}
             className="hotelsCard -type-1 hover-inside-slider"
           >
+        
             <div className="hotelsCard__image">
               <div className="cardImage inside-slider">
                 <Slider

@@ -1,4 +1,4 @@
-import CallToActions from "@/components/common/CallToActions";
+//import CallToActions from "@/components/common/CallToActions";
 import Header11 from "@/components/header/header-11";
 import DefaultFooter from "@/components/footer/default";
 import MainFilterSearchBox from "@/components/hotel-list/hotel-list-v5/MainFilterSearchBox";

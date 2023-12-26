@@ -4,16 +4,15 @@ import Hero4 from "@/components/hero/hero-4";
 import BlockGuide from "@/components/block/BlockGuide";
 import CallToActions from "@/components/home/home-4/CallToActions";
 import Testimonial from "@/components/home/home-4/Testimonial";
-import Blog4 from "@/components/blog/Blog4";
+//import Blog4 from "@/components/blog/Blog4";
 import Brand from "@/components/brand/Brand";
-import Counter2 from "@/components/counter/Counter2";
-import Counter from "@/components/counter/Counter";
+// import Counter2 from "@/components/counter/Counter2";
+// import Counter from "@/components/counter/Counter";
 import ParallaxBanner from "@/components/banner/ParallaxBanner";
-import Hotels3 from "@/components/hotels/Hotels3";
-import FilterHotelsTabs2 from "@/components/hotels/filter-tabs/FilterHotelsTabs2";
+//import Hotels3 from "@/components/hotels/Hotels3";
 import FilterHotels2 from "@/components/hotels/FilterHotels2";
 import { Link } from "react-router-dom";
-import Travellers from "@/components/home/home-4/Travellers";
+//import Travellers from "@/components/home/home-4/Travellers";
 import FilterHotels4 from "@/components/hotels/FilterHotels4";
 import MetaComponent from "@/components/common/MetaComponent";
 
@@ -202,7 +201,7 @@ const Home_4 = () => {
           </div>
      
           <div className="row y-gap-30 pt-40">
-            <Blog4 />
+             <Blog4 />
           </div>
 
         </div>

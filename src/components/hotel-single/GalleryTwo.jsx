@@ -5,8 +5,7 @@ import Overview from "@/components/hotel-single/Overview";
 import PopularFacilities from "@/components/hotel-single/PopularFacilities";
 import ModalVideo from "react-modal-video";
 import SidebarRight2 from "@/components/hotel-single/SidebarRight2";
-import RatingBox from "@/components/hotel-single/RatingBox";
-import PropertyHighlights2 from "@/components/hotel-single/PropertyHighlights2";
+
 
 export default function GalleryTwo({ event }) {
   console.log(event, "picture");
@@ -139,8 +138,7 @@ export default function GalleryTwo({ event }) {
 
             <div>
               <SidebarRight2 event={event}/>
-              {/* <RatingBox hotel={hotel} />
-              <PropertyHighlights2 /> */}
+           
             </div> 
             
           </div>
