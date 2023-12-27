@@ -92,24 +92,20 @@ fetchData();
                 <div className="cardImage__leftBadge">
                   <div
                     className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
-                      isTextMatched(item?.tag, "breakfast included")
+                      isTextMatched(item?.tag, "Open")
                         ? "bg-dark-1 text-white"
                         : ""
                     } ${
-                      isTextMatched(item?.tag, "best seller")
+                      isTextMatched(item?.tag, "Closed")
                         ? "bg-blue-1 text-white"
                         : ""
                     } 
                     } ${
-                      isTextMatched(item?.tag, "-25% today")
+                      isTextMatched(item?.tag, "Fast Filling")
                         ? "bg-brown-1 text-white"
                         : ""
                     } 
-                     ${
-                       isTextMatched(item?.tag, "top rated")
-                         ? "bg-yellow-1 text-dark-1"
-                         : ""
-                     }`}
+                    `}
                   >
                     {item?.tag}
                   </div>
@@ -123,23 +119,10 @@ fetchData();
               <p className="text-light-1 lh-14 text-14 mt-5">
                 {item?.location}
               </p>
-              {/* <div className="d-flex items-center mt-20">
-                <div className="flex-center bg-blue-1 rounded-4 size-30 text-12 fw-600 text-white">
-                  {item?.ratings}
-                </div>
-                <div className="text-14 text-dark-1 fw-500 ml-10">
-                  Exceptional
-                </div>
-                <div className="text-14 text-light-1 ml-10">
-                  {item?.numberOfReviews} reviews
-                </div>
-              </div> */}
-              {/* <div className="mt-5">
-                <div className="fw-500">
-                  Starting from{" "}
-                  <span className="text-blue-1">INR${item?.price}</span>
-                </div>
-              </div> */}
+              <p className="text-light-1 lh-14 text-14 mt-5">
+                {item?.year.split("T")[0]}
+              </p>
+             
             </div>
           </Link>
         </div>

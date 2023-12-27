@@ -18,9 +18,32 @@ const index = () => {
           >
             <SwiperSlide>
               <div className="masthead__image">
-                <img alt="image" src="/img/masthead/4/bg.png" />
+                {/* <img alt="image" src="/img/masthead/4/bg.png" /> */}
+                <video controls={false} autoPlay loop muted style={{ width: '100%' }}>
+          <source src="/img/masthead/4/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="masthead__image">
+               
+                <video controls={false} autoPlay loop muted style={{ width: '100%' }}>
+          <source src="/img/masthead/4/video2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="masthead__image">
+                
+                <video controls={false} autoPlay loop muted style={{ width: '100%' }}>
+          <source src="/img/masthead/4/video3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+              </div>
+            </SwiperSlide>
+            
           </Swiper>
 
           <div className="masthead__content">
