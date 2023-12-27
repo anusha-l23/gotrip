@@ -1,35 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const SearchBar = () => {
+const EventSearch = ({onEventChange}) => {
+
   const [searchValue, setSearchValue] = useState("");
-  const [selectedItem, setSelectedItem] = useState(null);
+const [eventNames, setEventNames] = useState([]);
 
-  const EventContent = [
-    {
-id: 1,
-      name: "Marathon 1",
-    },
-    {
-      id: 2,
-      name: "Marathon 2",
-    },
-    {
-      id: 3,
-      name: "Marathon 3",
-    },
-    {
-      id: 4,
-      name: "Marathon 4",
-    },
-    {
-      id: 5,
-      name: "Marathon 5",
-    },
-  ];
 
-  const handleOptionClick = (item) => {
-    setSearchValue(item.name);
-    setSelectedItem(item);
+const fetchData = async () => {
+  try {
+    const response = await axios.get('http://localhost:3001/santarun/get-results');
+    const eventNames = response.data.map(event => event.eventName);
+    setEventNames(eventNames);
+  } catch (error) {
+    console.error('Error fetching Event Names:', error);
+  }
+};
+
+
+const handleEventChange = (e)=> {
+const value = e.target.value;
+onEventChange(value);
+setSearchValue(value);
+}
+
+useEffect(() => {
+  fetchData();
+}, []);
+
+ 
+
+  const handleOptionClick = (eventName) => {
+    setSearchValue(eventName);
+    onEventChange(eventName)
   };
 
   return (
@@ -52,30 +55,25 @@ id: 1,
             />
           </div>
         </div>
-        {/* End location Field */}
 
         <div className="shadow-2 dropdown-menu min-width-400">
-          <div className="bg-white px-20 py-20 sm:px-0 sm:py-15 rounded-4">
-            <ul className="y-gap-5 js-results">
-              {EventContent.map((item) => (
-                <li
-                  className={`-link d-block col-12 text-left rounded-4 px-20 py-15 js-search-option mb-1 ${
-                    selectedItem && selectedItem.id === item.id ? "active" : ""
-                  }`}
-                  key={item.id}
-                  role="button"
-                  onClick={() => handleOptionClick(item)}
-                >
-                  <div className="d-flex">
-                    
-                    <div className="ml-10">
-                      <div className="text-15 lh-12 fw-500 js-search-option-target">
-                        {item.name}
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              ))}
+     <div className="bg-white px-20 py-20 sm:px-0 sm:py-15 rounded-4">
+             <ul className="y-gap-5 js-results">
+ {eventNames.map((eventName, index) => (
+  <>
+  <div className="d-flex ">
+  <div className="icon-location-2 text-light-1 text-20 pt-4" />
+            <div
+              key={index}
+              style={{cursor:"pointer"}}
+              className="dropdown-item"
+              onClick={() => handleOptionClick(eventName)}
+            >
+              {eventName}
+            </div>
+            </div>
+            </>
+          ))} 
             </ul>
           </div>
         </div>
@@ -84,4 +82,4 @@ id: 1,
   );
 };
 
-export default SearchBar;
+export default EventSearch;

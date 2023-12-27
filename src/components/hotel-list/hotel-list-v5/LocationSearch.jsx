@@ -5,7 +5,6 @@ import axios from 'axios';
 const SearchBar = ({ onLocationChange }) => {
   const [inputValue, setInputValue] = useState('');
   const [locations, setLocations] = useState([]);
-  const [showDropdown, setShowDropdown] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -25,13 +24,11 @@ const SearchBar = ({ onLocationChange }) => {
   const handleLocationInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
-    setShowDropdown(true);
     onLocationChange(value); 
   };
 
   const handleLocationClick = (location) => {
     setInputValue(location);
-    setShowDropdown(false);
     onLocationChange(location);
   };
 
@@ -55,12 +52,15 @@ const SearchBar = ({ onLocationChange }) => {
           />
         </div>
       </div>
-      {showDropdown && (
+    
 
 <div className="shadow-2 dropdown-menu min-width-400">
      <div className="bg-white px-20 py-20 sm:px-0 sm:py-15 rounded-4">
              <ul className="y-gap-5 js-results">
  {locations.map((location, index) => (
+  <>
+  <div className="d-flex ">
+  <div className="icon-location-2 text-light-1 text-20 pt-4" />
             <div
               key={index}
               style={{cursor:"pointer"}}
@@ -69,23 +69,13 @@ const SearchBar = ({ onLocationChange }) => {
             >
               {location}
             </div>
+            </div>
+            </>
           ))} 
             </ul>
           </div>
         </div>
 
-        // <div className="dropdown-menu">
-        //   {locations.map((location, index) => (
-        //     <div
-        //       key={index}
-        //       className="dropdown-item"
-        //       onClick={() => handleLocationClick(location)}
-        //     >
-        //       {location}
-        //     </div>
-        //   ))}
-        // </div>
-      )}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import LocationSearch from "./LocationSearch";
 import GuestSearch from "../common/GuestSearch";
 import EventSearch from "./EventSearch";
-const MainFilterSearchBox = ({onLocationChange}) => {
+const MainFilterSearchBox = ({onLocationChange, onEventChange}) => {
   return (
     <>
       <div className="mainSearch -col-3-big bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-4 mt-30">
@@ -16,7 +16,7 @@ const MainFilterSearchBox = ({onLocationChange}) => {
               </h4>
               <DateSearch />
             </div> */}
-            <EventSearch />
+            <EventSearch onEventChange={onEventChange}/>
           </div>
 
 

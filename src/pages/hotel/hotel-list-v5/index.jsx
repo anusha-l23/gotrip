@@ -17,11 +17,16 @@ const metadata = {
 const Events = () => {
 
   const [selectedLocation, setSelectedLocation]= useState("");
-
+const [selectedEvent, setSelectedEvent] = useState("");
 
   const handleLocationChange = (newLocation) => {
     setSelectedLocation(newLocation);
   } 
+
+  const handleEventChange = (newEvent) => {
+    setSelectedEvent(newEvent)
+  }
+
 
   return (
     <>
@@ -49,7 +54,7 @@ const Events = () => {
                   Find Your Dream Luxury Hotel
                 </h1>
               </div>
-              <MainFilterSearchBox onLocationChange={handleLocationChange}/>
+              <MainFilterSearchBox onLocationChange={handleLocationChange} onEventChange={handleEventChange}/>
             </div>
           </div>
         </div>
@@ -82,7 +87,7 @@ const Events = () => {
             <div className="border-top-light mt-30 mb-30"></div>
 
             <div className="row y-gap-30">
-              <HotelProperties selectedLocation={selectedLocation}/>
+              <HotelProperties selectedLocation={selectedLocation} selectedEvent={selectedEvent}/>
             </div>
             <Pagination />
           </div>

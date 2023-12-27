@@ -5,7 +5,7 @@ import isTextMatched from "../../../utils/isTextMatched";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const HotelProperties = ({selectedLocation}) => {
+const HotelProperties = ({selectedLocation, selectedEvent}) => {
   var itemSettings = {
     dots: true,
     infinite: true,
@@ -24,9 +24,17 @@ const HotelProperties = ({selectedLocation}) => {
 fetchData();
   },[])
 
-  const filteredEvents = selectedLocation
-  ? events.filter(event => event.location.toLowerCase().includes(selectedLocation.toLowerCase()))
-  : events;
+  // const filteredEvents = selectedLocation
+  // ? events.filter(event => event.location.toLowerCase().includes(selectedLocation.toLowerCase()))
+  // : events;
+const filteredEvents = events.filter(event=>{
+  const locationMatches = !selectedLocation || 
+  event.location.toLowerCase().includes(selectedLocation.toLowerCase());
+  const eventMatches = !selectedEvent ||
+  event.eventName.toLowerCase().includes(selectedEvent.toLowerCase());
+
+  return locationMatches && eventMatches;
+})
 
 
   // custom navigation
