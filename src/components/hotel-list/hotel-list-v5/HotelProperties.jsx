@@ -107,7 +107,7 @@ fetchData();
                     } 
                     `}
                   >
-                    {item?.tag}
+                    { item?.tag }
                   </div>
                 </div>
               </div>
