@@ -95,31 +95,27 @@ fetchData();
                   </button>
                 </div>
 
-                {/* <div className="cardImage__leftBadge">
+                <div className="cardImage__leftBadge">
                   <div
                     className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
-                      isTextMatched(item?.tag, "breakfast included")
+                      isTextMatched(item?.tag, "Open")
                         ? "bg-dark-1 text-white"
                         : ""
                     } ${
-                      isTextMatched(item?.tag, "best seller")
+                      isTextMatched(item?.tag, "Closed")
                         ? "bg-blue-1 text-white"
                         : ""
                     } 
                     } ${
-                      isTextMatched(item?.tag, "-25% today")
+                      isTextMatched(item?.tag, "Fast Filling")
                         ? "bg-brown-1 text-white"
                         : ""
                     } 
-                     ${
-                       isTextMatched(item?.tag, "top rated")
-                         ? "bg-yellow-1 text-dark-1"
-                         : ""
-                     }`}
+                    `}
                   >
                     {item?.tag}
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
             <div className="hotelsCard__content mt-10">

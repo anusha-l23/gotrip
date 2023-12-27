@@ -29,8 +29,8 @@ const BookingPage = () => {
         {/* End container */}
       </section>
       {/* End stepper */}
-
-      <CallToActions />
+{/* 
+      <CallToActions /> */}
       {/* End Call To Actions Section */}
 
       <DefaultFooter />

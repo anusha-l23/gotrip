@@ -5,6 +5,7 @@ import Overview from "@/components/hotel-single/Overview";
 import PopularFacilities from "@/components/hotel-single/PopularFacilities";
 import ModalVideo from "react-modal-video";
 import SidebarRight2 from "@/components/hotel-single/SidebarRight2";
+import {Link} from "react-router-dom";
 
 
 export default function GalleryTwo({ event }) {
@@ -104,12 +105,11 @@ export default function GalleryTwo({ event }) {
                       INR<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m13.425 20.7l-6.15-6.4q-.125-.125-.2-.312T7 13.6V13q0-.425.288-.712T8 12h2.5q1.325 0 2.288-.862T13.95 9H7q-.425 0-.712-.288T6 8q0-.425.288-.712T7 7h6.65q-.425-.875-1.263-1.437T10.5 5H7q-.425 0-.712-.288T6 4q0-.425.288-.712T7 3h10q.425 0 .713.288T18 4q0 .425-.288.713T17 5h-2.25q.35.425.625.925T15.8 7H17q.425 0 .713.288T18 8q0 .425-.288.713T17 9h-1.025q-.2 2.125-1.75 3.563T10.5 14h-.725l5.1 5.3q.45.475.188 1.088T14.15 21q-.2 0-.387-.075t-.338-.225"></path></svg>
                     </span>
                   </div>
-                  <a
-                    href="#"
+                  <Link to={`/booking-page/${event?.id}`}
                     className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
                   >
                     Register <div className="icon-arrow-top-right ml-15" />
-                  </a>
+                  </Link>
                 </div>
             
               </div>

@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 const ContactForm = () => {
-  const handleSubmit = (event) => {
+
+  const [values, setValues] = useState({
+name:"", email:"",message:""
+  })
+
+const handleChange = (e) => {
+  const {name, value} = e.target;
+  setValues({...values, [name]: value})
+}
+
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    // handle form submission logic here
+    try {
+      const response = await axios.post("http://localhost:3001/santarun/form-submit", values);
+      setValues(response.data)
+      console.log("!");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
     <form className="row y-gap-20 pt-20" onSubmit={handleSubmit}>
       <div className="col-12">
         <div className="form-input">
-          <input type="text" id="name" required />
+          <input type="text" id="name" 
+          name="name"
+          value={values.name}
+          onChange={handleChange}
+          required />
           <label htmlFor="name" className="lh-1 text-16 text-light-1">
             Full Name
           </label>
@@ -18,23 +39,31 @@ const ContactForm = () => {
       </div>
       <div className="col-12">
         <div className="form-input">
-          <input type="email" id="email" required />
+          <input type="email" id="email" 
+           name="email"
+           value={values.email}
+           onChange={handleChange}
+          required />
           <label htmlFor="email" className="lh-1 text-16 text-light-1">
             Email
           </label>
         </div>
       </div>
-      <div className="col-12">
+      {/* <div className="col-12">
         <div className="form-input">
           <input type="text" id="subject" required />
           <label htmlFor="subject" className="lh-1 text-16 text-light-1">
             Subject
           </label>
         </div>
-      </div>
+      </div> */}
       <div className="col-12">
         <div className="form-input">
-          <textarea id="message" required rows="4"></textarea>
+          <textarea id="message" required rows="4"
+          name="message"
+          value={values.message}
+          onChange={handleChange}
+          ></textarea>
           <label htmlFor="message" className="lh-1 text-16 text-light-1">
             Your Message
           </label>

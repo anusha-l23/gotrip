@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import BookingDetails from "./sidebar/BookingDetails";
 
+
 const CustomerInfo = () => {
+
+
   return (
+
     <>
       <div className="col-xl-7 col-lg-8 mt-30">
         <div className="py-15 px-20 rounded-4 text-15 bg-blue-1-05">

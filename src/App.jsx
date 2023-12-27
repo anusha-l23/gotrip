@@ -96,7 +96,7 @@ function App() {
                 path="hotel-single-v2/:id"
                 element={<HotelSingleV2Dynamic />}
               />
-              <Route path="booking-page" element={<BookingPage />} />
+              <Route path="booking-page/:id" element={<BookingPage />} />
 
             </Route>
           </Routes>

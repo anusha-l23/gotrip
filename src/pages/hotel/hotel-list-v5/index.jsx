@@ -7,6 +7,7 @@ import HotelProperties from "@/components/hotel-list/hotel-list-v5/HotelProperti
 import DropdownSelelctBar from "@/components/hotel-list/common/DropdownSelelctBar";
 
 import MetaComponent from "@/components/common/MetaComponent";
+import { useState } from "react";
 
 const metadata = {
   title: "Hotel List v5 || GoTrip - Travel & Tour ReactJs Template",
@@ -14,6 +15,12 @@ const metadata = {
 };
 
 const Events = () => {
+
+  const [selectedLocation, setSelectedLocation]= useState("");
+
+  const handleLocationChange = (newLocation) => {
+    setSelectedLocation(newLocation);
+  } 
   return (
     <>
       <MetaComponent meta={metadata} />
@@ -40,7 +47,7 @@ const Events = () => {
                   Find Your Dream Luxury Hotel
                 </h1>
               </div>
-              <MainFilterSearchBox />
+              <MainFilterSearchBox onLocationChange={handleLocationChange}/>
             </div>
           </div>
         </div>
@@ -73,7 +80,7 @@ const Events = () => {
             <div className="border-top-light mt-30 mb-30"></div>
 
             <div className="row y-gap-30">
-              <HotelProperties />
+              <HotelProperties selectedLocation={selectedLocation}/>
             </div>
             <Pagination />
           </div>

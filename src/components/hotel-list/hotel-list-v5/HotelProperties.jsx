@@ -5,7 +5,7 @@ import isTextMatched from "../../../utils/isTextMatched";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const HotelProperties = () => {
+const HotelProperties = ({selectedLocation}) => {
   var itemSettings = {
     dots: true,
     infinite: true,
@@ -23,6 +23,11 @@ const HotelProperties = () => {
   useEffect(()=>{
 fetchData();
   },[])
+
+  const filteredEvents = selectedLocation
+  ? events.filter(event => event.location.toLowerCase().includes(selectedLocation.toLowerCase()))
+  : events;
+
 
   // custom navigation
   function ArrowSlick(props) {
@@ -50,7 +55,7 @@ fetchData();
 
   return (
     <>
-      {events.map((item) => (
+      {filteredEvents.map((item) => (
         
         <div
         className="col-lg-3 col-sm-6"

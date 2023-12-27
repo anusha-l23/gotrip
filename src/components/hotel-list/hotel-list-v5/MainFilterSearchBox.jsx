@@ -2,12 +2,12 @@
 import LocationSearch from "./LocationSearch";
 import GuestSearch from "../common/GuestSearch";
 import EventSearch from "./EventSearch";
-const MainFilterSearchBox = () => {
+const MainFilterSearchBox = ({onLocationChange}) => {
   return (
     <>
       <div className="mainSearch -col-3-big bg-white px-10 py-10 lg:px-20 lg:pt-5 lg:pb-20 rounded-4 mt-30">
         <div className="button-grid items-center">
-          <LocationSearch />
+          <LocationSearch onLocationChange={onLocationChange}/>
 
           <div className="searchMenu-date px-30 lg:py-20  sm:px-20 js-form-dd js-calendar">
             {/* <div>
