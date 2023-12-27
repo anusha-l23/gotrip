@@ -18,9 +18,11 @@ const Events = () => {
 
   const [selectedLocation, setSelectedLocation]= useState("");
 
+
   const handleLocationChange = (newLocation) => {
     setSelectedLocation(newLocation);
   } 
+
   return (
     <>
       <MetaComponent meta={metadata} />
