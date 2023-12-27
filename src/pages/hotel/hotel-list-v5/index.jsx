@@ -31,8 +31,6 @@ const [selectedEvent, setSelectedEvent] = useState("");
   return (
     <>
       <MetaComponent meta={metadata} />
-
-
       <div className="header-margin"></div>
 
       <Header11 />

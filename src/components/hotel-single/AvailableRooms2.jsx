@@ -72,43 +72,16 @@ const handleDecrement = (categoryName, amount) => {
           <div className="row y-gap-30">
             <div className="col-xl-auto">
               <div className="ratio ratio-1:1 col-12 col-md-4 col-xl-12">
-                <img
-                  src="/img/backgrounds/1.png"
-                  alt="image"
-                  className="img-ratio rounded-4"
-                />
+                 <img className="img-ratio rounded-4"
+                        src={`http://localhost:3001/${event?.eventPicture.replace(/\\/g, '/')}`} width="100%" height="100%"/>
               </div>
               {/* image */}
 
               <div>
                 <div className="text-18 fw-500 mt-10">{event?.eventName}</div>
-                {/* <div className="y-gap-5 pt-5">
-                  <div className="d-flex items-center">
-                    <i className="icon-no-smoke text-20 mr-10" />
-                    <div className="text-15">Non-smoking rooms</div>
-                  </div>
-                  <div className="d-flex items-center">
-                    <i className="icon-wifi text-20 mr-10" />
-                    <div className="text-15">Free WiFi</div>
-                  </div>
-                  <div className="d-flex items-center">
-                    <i className="icon-parking text-20 mr-10" />
-                    <div className="text-15">Parking</div>
-                  </div>
-                  <div className="d-flex items-center">
-                    <i className="icon-kitchen text-20 mr-10" />
-                    <div className="text-15">Kitchen</div>
-                  </div>
-                </div> */}
-                {/* <a
-                  href="#"
-                  className="d-block text-15 fw-500 underline text-blue-1 mt-15"
-                >
-                  Show Room Information
-                </a> */}
-              </div>
+                           </div>
             </div>
-            {/* End col-xl-atuo */}
+    
 
             <div className="col-xl">
               {item.items.map((singleItem) => (

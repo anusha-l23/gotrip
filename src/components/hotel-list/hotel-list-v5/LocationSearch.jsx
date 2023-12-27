@@ -48,7 +48,6 @@ const SearchBar = ({ onLocationChange }) => {
             className="js-search js-dd-focus"
             value={inputValue}
             onChange={handleLocationInputChange}
-            onFocus={() => setShowDropdown(true)}
           />
         </div>
       </div>
